@@ -6,15 +6,18 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            double euros, escudos;
-            double taxa_de_conversao = 200.482;
+            double comprimento, largura, area;
 
-            log("Introduz euros:");
-            euros = double.Parse(Console.ReadLine());
-            escudos = euros * taxa_de_conversao;
+            log("Introduz o comprimento:");
+            comprimento = double.Parse(Console.ReadLine());
+            log("Introduz a largura:");
+            largura = double.Parse(Console.ReadLine());
+
+
+            area = comprimento * largura;
             log("-+-+-+-+-+-+-+-+-");
 
-            log("O valor de " + euros + " euros em escudos é: " + escudos);
+            log("A área é " + area + " com a largura de: " + largura + " e com o comprimento de: " + comprimento);
             Console.ReadKey();
         }
 
