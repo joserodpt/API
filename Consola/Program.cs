@@ -6,19 +6,29 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            double comprimento, largura, area;
+            string nome;
+            int idade;
 
-            log("Introduz o comprimento:");
-            comprimento = double.Parse(Console.ReadLine());
-            log("Introduz a largura:");
-            largura = double.Parse(Console.ReadLine());
+            log("Nome:");
+            nome = Console.ReadLine();
+            log("Data de nascimento:");
 
+            Boolean check = int.TryParse(Console.ReadLine(), out int datanascimento);
+            if (check)
+            {
+                //verdadeiro, apenas numero
+                //      Pegar o ano atual e substrair data de nascimento
+                idade = DateTime.UtcNow.Year - datanascimento;
+                log("-+-+-+-+-+-+-+-+-");
 
-            area = comprimento * largura;
-            log("-+-+-+-+-+-+-+-+-");
-
-            log("A área é " + area + " com a largura de: " + largura + " e com o comprimento de: " + comprimento);
+                log("O/A " + nome + " têm " + idade + " anos.");
+            } else
+            {
+                //falso, não foi introduzido um número
+                log("Dados introduzidos na data de nascimento inválidos.");
+            }
             Console.ReadKey();
+
         }
 
         static void log(String s)
