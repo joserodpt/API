@@ -6,27 +6,18 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            string nome;
-            int idade;
+            double raio, altura, volume, raio2;
 
-            log("Nome:");
-            nome = Console.ReadLine();
-            log("Data de nascimento:");
+            log("Introduzir raio:");
+            raio = double.Parse(Console.ReadLine());
+            log("Introduzir altura:");
+            altura = double.Parse(Console.ReadLine());
 
-            Boolean check = int.TryParse(Console.ReadLine(), out int datanascimento);
-            if (check)
-            {
-                //verdadeiro, apenas numero
-                //      Pegar o ano atual e substrair data de nascimento
-                idade = DateTime.UtcNow.Year - datanascimento;
-                log("-+-+-+-+-+-+-+-+-");
-
-                log("O/A " + nome + " têm " + idade + " anos.");
-            } else
-            {
-                //falso, não foi introduzido um número
-                log("Dados introduzidos na data de nascimento inválidos.");
-            }
+            //calcular raio^2
+            raio2 = Math.Pow(raio, 2.00);
+            volume = 3.1416 * raio2 * altura;
+           
+            log("O volume de raio " + raio + " e de altura " + altura + " é: " + volume);
             Console.ReadKey();
 
         }
