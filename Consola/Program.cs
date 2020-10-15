@@ -2,26 +2,19 @@
 
 namespace Consola
 {
-    class Program
-    {
+    class Program {
+    
         static void Main(string[] args)
         {
-            int a, b, c, triploa, produtobc;
+            double euros, escudos;
+            double taxa_de_conversao = 200.482;
 
-            log("Introduz os 3 números:");
-            a = int.Parse(Console.ReadLine());
-            log("a: " + a);
-            b = int.Parse(Console.ReadLine());
-            log("b: " + b);
-            c = int.Parse(Console.ReadLine());
-            log("c: " + c);
+            log("Introduz euros:");
+            euros = double.Parse(Console.ReadLine());
+            escudos = euros * taxa_de_conversao;
             log("-+-+-+-+-+-+-+-+-");
 
-            triploa = a * 3;
-            produtobc = b * c;
-            double quadradoc = Math.Pow(c, 2);
-
-            log("Triplo de a: " + triploa + " | Produto de b com c: " + produtobc + " | Quadrado de C: " + quadradoc);
+            log("O valor de " + euros + " euros em escudos é: " + escudos);
             Console.ReadKey();
         }
 
