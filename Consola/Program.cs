@@ -15,9 +15,9 @@ namespace Consola
 
             //calcular raio^2
             raio2 = Math.Pow(raio, 2.00);
-            volume = 3.2222 * raio2 * altura;
-           
-            log("O volume de raio " + raio + " e de altura " + altura + " é: " + volume);
+            volume = Math.PI * raio2 * altura;
+
+            log("O volume de raio " + raio + " e de altura " + altura + " é: " + Math.Round(volume, 2));
             Console.ReadKey();
         }
 
