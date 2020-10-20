@@ -6,18 +6,20 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            double classific_freq, classific_exame, resultado;
+            double cateto1, cateto2, hipotenusa;
 
             //pedir classificações
-            log("Introduzir Classificação da Frequência:");
-            classific_freq = double.Parse(Console.ReadLine());
-            log("Introduzir Classificação do Exame:");
-            classific_exame = double.Parse(Console.ReadLine());
+            log("Introduzir cateto1:");
+            cateto1 = double.Parse(Console.ReadLine());
+            log("Introduzir cateto2:");
+            cateto2 = double.Parse(Console.ReadLine());
 
-            //calcular media
-            resultado = classific_freq*0.75 + classific_exame*0.25;
+            //catetos o quadrado dos catetos
+            double cateto1aoquadrado = Math.Pow(cateto1, 2.0);
+            double cateto2aoquadrado = Math.Pow(cateto2, 2.0);
+            hipotenusa = Math.Sqrt(cateto1aoquadrado + cateto2aoquadrado);
            
-            log("A classificação final é de: " + resultado + " valores.");
+            log("A hipotenusa é: " + hipotenusa);
             Console.ReadKey();
         }
 
