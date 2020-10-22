@@ -6,21 +6,20 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            double cateto1, cateto2, hipotenusa;
+            String nome;
+            Double peso, calculo;
 
-            //pedir classificações
-            log("Introduzir cateto1:");
-            cateto1 = double.Parse(Console.ReadLine());
-            log("Introduzir cateto2:");
-            cateto2 = double.Parse(Console.ReadLine());
+            log("Introduzir nome:");
+            nome = Console.ReadLine();
+            log("Introduzir peso:");
+            peso = Double.Parse(Console.ReadLine());
 
-            //catetos o quadrado dos catetos
-            double cateto1aoquadrado = Math.Pow(cateto1, 2.0);
-            double cateto2aoquadrado = Math.Pow(cateto2, 2.0);
-            hipotenusa = Math.Sqrt(cateto1aoquadrado + cateto2aoquadrado);
-           
-            log("A hipotenusa é: " + hipotenusa);
-            Console.ReadKey();
+            if (peso < 70)
+            {
+                calculo = 70 - peso;
+                log(nome + ", ainda te falta " + calculo + "kg para o objetivo.");
+                Console.ReadKey();
+            }
         }
 
         static void log(String s)
