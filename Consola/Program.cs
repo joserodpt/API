@@ -7,22 +7,23 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            Double lado1, lado2;
+            Double compra, venda, transacao;
 
-            log("Introduzir lado1:");
-            lado1 = Double.Parse(Console.ReadLine());
-            log("Introduzir lado2:");
-            lado2 = Double.Parse(Console.ReadLine());
+            log("Introduzir preço de compra:");
+            compra = Double.Parse(Console.ReadLine());
+            log("Introduzir preço de venda:");
+            venda = Double.Parse(Console.ReadLine());
 
-            if (lado1 == lado2)
+            transacao = venda - compra;
+
+            if (transacao > 0)
             {
-                //triangulo
-                double areat = (lado1*lado2)/ 2;
-                log("Área do triângulo: " + areat);
+                //lucro
+                log("A Transação deu lucro de " + transacao + " euros.");
             } else
             {
-                //retangulo
-                log("Área do retângulo: " + lado1*lado2);
+                //prejuizo
+                log("A Transação deu prejuíizo de " + transacao + " euros.");
             }
 
             Console.ReadKey();
