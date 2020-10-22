@@ -7,27 +7,42 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            Double compra, venda, transacao;
+            Double a, b;
+            int escolha;
 
-            log("Introduzir preço de compra:");
-            compra = Double.Parse(Console.ReadLine());
-            log("Introduzir preço de venda:");
-            venda = Double.Parse(Console.ReadLine());
+            log("~ Calculadora Simplex ~");
+            log("Introduzir número1:");
+            a = Double.Parse(Console.ReadLine());
+            log("Introduzir número2:");
+            b = Double.Parse(Console.ReadLine());
+            log("Operações possíveis:" +
+                "\n1 - Somar" +
+                "\n2 - Subtrair" +
+                "\n3 - Multiplicar" +
+                "\n4 - Dividir" +
+                "\n(Digita a opção pretendida)");
+            escolha = int.Parse(Console.ReadLine());
 
-            transacao = venda - compra;
-
-            if (transacao > 0)
+            switch(escolha)
             {
-                //lucro
-                log("A Transação deu lucro de " + transacao + " euros.");
-            } else
-            {
-                //prejuizo
-                log("A Transação deu prejuíizo de " + transacao + " euros.");
+                case 1:
+                    log("A soma dá: " + (a+b));
+                    break;
+                case 2:
+                    log("A subtração dá: " + (a - b));
+                    break;
+                case 3:
+                    log("A multiplicação dá: " + (a * b));
+                    break;
+                case 4:
+                    log("A divisão dá: " + (a/b));
+                    break;
+                default:
+                    log("Opção não reconhecida.");
+                    break;
             }
 
             Console.ReadKey();
-
         }
 
         static void log(String s)
