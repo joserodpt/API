@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Consola
 {
@@ -6,21 +8,18 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            Double a, b;
+            List<Double> lista = new List<Double>();
 
-            log("Introduzir a:");
-            a = Double.Parse(Console.ReadLine());
-            log("Introduzir b:");
-            b = Double.Parse(Console.ReadLine());
+            log("Introduzir 1º número:");
+            lista.Add(Double.Parse(Console.ReadLine()));
+            log("Introduzir 2º número:");
+            lista.Add(Double.Parse(Console.ReadLine()));
+            log("Introduzir 3º número:");
+            lista.Add(Double.Parse(Console.ReadLine()));
 
-            if (a > b)
-            {
-                log("a > b. a: " + a);
-            } else
-            {
-                log("a < b. b: " + b);
-            }
+            Double max = lista.Max();
 
+            log("O maior número têm o valor " + max);
             Console.ReadKey();
         }
 
