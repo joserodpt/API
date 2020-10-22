@@ -7,20 +7,27 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            int a, b;
+            Double a, b;
 
             log("Introduzir a:");
-            a = int.Parse(Console.ReadLine());
-           
-            //verificar se é par ou ímpar com o resto da divisão
-            if (a%2 == 0)
+            a = Double.Parse(Console.ReadLine());
+            log("Introduzir b:");
+            b = Double.Parse(Console.ReadLine());
+
+            if (a == b)
             {
-                //par
-                log("O número é par");
-            } else
+                log("a e b são iguais.")
+                Console.ReadKey();
+                return;
+            }
+
+            if (a > b)
             {
-                //ímpar
-                log("O número é impar");
+                log("a > b. a: " + a);
+            }
+            else
+            {
+                log("a < b. b: " + b);
             }
 
             Console.ReadKey();
