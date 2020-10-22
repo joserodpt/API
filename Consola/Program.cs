@@ -20,6 +20,8 @@ namespace Consola
             {
                 log("a < b. b: " + b);
             }
+
+            Console.ReadKey();
         }
 
         static void log(String s)
