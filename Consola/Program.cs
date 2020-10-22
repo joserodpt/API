@@ -15,10 +15,10 @@ namespace Consola
 
             if (a > b)
             {
-                log("O maior número é o a: " + a);
+                log("a > b. a: " + a);
             } else
             {
-                log("O maior número é o b: " + b);
+                log("a < b. b: " + b);
             }
         }
 
