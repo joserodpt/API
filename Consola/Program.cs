@@ -7,20 +7,24 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            int a, b;
+            Double a;
 
             log("Introduzir a:");
-            a = int.Parse(Console.ReadLine());
+            a = Double.Parse(Console.ReadLine());
            
-            //verificar se é par ou ímpar com o resto da divisão
-            if (a%2 == 0)
+            if (a >= 9.5)
             {
-                //par
-                log("O número é par");
+                //positiva
+                log("A nota é positiva.");
             } else
             {
-                //ímpar
-                log("O número é impar");
+                //negativa
+                log("A nota é negativa.");
+                if (a >= 7 && a <= 9)
+                {
+                    //dentro de intervalo
+                    log("A nota está dentro do intervalo de 7 a 9");
+                }
             }
 
             Console.ReadKey();
