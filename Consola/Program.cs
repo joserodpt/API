@@ -23,7 +23,7 @@ namespace Consola
             } else
             {
                 //prejuizo
-                log("A Transação deu prejuíizo de " + transacao + " euros.");
+                log("A Transação deu prejuízo de " + transacao + " euros.");
             }
 
             Console.ReadKey();
