@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace Consola
 {
@@ -6,29 +7,22 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            Double a, b;
+            int a, b;
 
             log("Introduzir a:");
-            a = Double.Parse(Console.ReadLine());
-            log("Introduzir b:");
-            b = Double.Parse(Console.ReadLine());
+            a = int.Parse(Console.ReadLine());
+           
+            //verificar se é par ou ímpar com o resto da divisão
+            if (a%2 == 0)
+            {
+                //par
+                log("O número é par");
+            } else
+            {
+                //ímpar
+                log("O número é impar");
+            }
 
-            if (a == b)
-            {
-                log("a e b são iguais.");
-                Console.ReadKey();
-            }
-            else
-            {
-                if (a > b)
-                {
-                    log("a > b. a: " + a);
-                }
-                else
-                {
-                    log("a < b. b: " + b);
-                }
-            }
             Console.ReadKey();
         }
 
