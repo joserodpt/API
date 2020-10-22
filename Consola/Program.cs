@@ -8,17 +8,7 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            List<Double> lista = new List<Double>();
-
-            log("Introduzir 1º número:");
-            lista.Add(Double.Parse(Console.ReadLine()));
-            log("Introduzir 2º número:");
-            lista.Add(Double.Parse(Console.ReadLine()));
-            log("Introduzir 3º número:");
-            lista.Add(Double.Parse(Console.ReadLine()));
-
-            Double max = lista.Max();
-
+           //todo
             log("O maior número têm o valor " + max);
             Console.ReadKey();
         }
