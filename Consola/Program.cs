@@ -7,39 +7,29 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            Double a, b;
-            int escolha;
+            Double compra, venda, transacao;
 
-            log("~ Calculadora Simplex ~");
-            log("Introduzir número1:");
-            a = Double.Parse(Console.ReadLine());
-            log("Introduzir número2:");
-            b = Double.Parse(Console.ReadLine());
-            log("Operações possíveis:" +
-                "\n1 - Somar" +
-                "\n2 - Subtrair" +
-                "\n3 - Multiplicar" +
-                "\n4 - Dividir" +
-                "\n(Digita a opção pretendida)");
-            escolha = int.Parse(Console.ReadLine());
+            log("Introduzir preço de compra:");
+            compra = Double.Parse(Console.ReadLine());
+            log("Introduzir preço de venda:");
+            venda = Double.Parse(Console.ReadLine());
 
-            switch(escolha)
+            transacao = venda - compra;
+
+            if (venda > compra)
             {
-                case 1:
-                    log("A soma dá: " + (a+b));
-                    break;
-                case 2:
-                    log("A subtração dá: " + (a - b));
-                    break;
-                case 3:
-                    log("A multiplicação dá: " + (a * b));
-                    break;
-                case 4:
-                    log("A divisão dá: " + (a/b));
-                    break;
-                default:
-                    log("Opção não reconhecida.");
-                    break;
+                //lucro
+                log("A Transação deu lucro de " + transacao + " euros.");
+            }
+            else
+            {
+                if (venda == compra)
+                {
+                    log("Não houve prejuízo, pois o preço de compra e de venda são iguais");
+                    return;
+                }
+                //prejuizo
+                log("A Transação deu prejuízo de " + transacao + " euros.");
             }
 
             Console.ReadKey();
