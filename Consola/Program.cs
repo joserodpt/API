@@ -7,7 +7,7 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            int a, b;
+            int a;
 
             log("Introduzir a:");
             a = int.Parse(Console.ReadLine());
