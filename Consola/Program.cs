@@ -16,7 +16,7 @@ namespace Consola
 
             if (a == b)
             {
-                log("a e b são iguais.")
+                log("a e b são iguais.");
                 Console.ReadKey();
                 return;
             }
