@@ -6,19 +6,19 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            String nome;
-            Double peso, calculo;
+            Double a, b;
 
-            log("Introduzir nome:");
-            nome = Console.ReadLine();
-            log("Introduzir peso:");
-            peso = Double.Parse(Console.ReadLine());
+            log("Introduzir a:");
+            a = Double.Parse(Console.ReadLine());
+            log("Introduzir b:");
+            b = Double.Parse(Console.ReadLine());
 
-            if (peso < 70)
+            if (a > b)
             {
-                calculo = 70 - peso;
-                log(nome + ", ainda te falta " + calculo + "kg para o objetivo.");
-                Console.ReadKey();
+                log("O maior número é o a: " + a);
+            } else
+            {
+                log("O maior número é o b: " + b);
             }
         }
 
