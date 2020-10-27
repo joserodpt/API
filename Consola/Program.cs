@@ -15,14 +15,28 @@ namespace Consola
             log("Introduzir mês em número:");
             mes = int.Parse(Console.ReadLine());
 
-            if (mes <= 12 && mes >= 1)
+            switch (mes)
             {
-                nomeMes = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(mes);
-                log("O mês " + mes + " (" + nomeMes + ") têm " + DateTime.DaysInMonth(DateTime.Now.Year, mes) + " dias.");
-            } else
-            {
-                log("Mês inválido");
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                case 12:
+                    nomeMes = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(mes);
+                    log("O mês " + mes + " (" + nomeMes + ") têm " + DateTime.DaysInMonth(DateTime.Now.Year, mes) + " dias.");
+                    break;
+                default:
+                    log("Mês inválido");
+                    break;
             }
+           
             Console.ReadKey();
         }
 
