@@ -23,6 +23,27 @@ namespace Consola
                 "\n(Digita a opção pretendida)");
             escolha = int.Parse(Console.ReadLine());
 
+            if (escolha == 1)
+            {
+                log("A soma dá: " + (a + b));
+            }
+            else if (escolha == 2)
+            {
+                log("A subtração dá: " + (a - b));
+            }
+            else if (escolha == 3)
+            {
+                log("A multiplicação dá: " + (a * b));
+            }
+            else if (escolha == 4)
+            {
+                log("A divisão dá: " + (a / b));
+            } else
+            {
+                log("Opção não reconhecida.");
+            }
+
+            /*
             switch(escolha)
             {
                 case 1:
@@ -40,7 +61,7 @@ namespace Consola
                 default:
                     log("Opção não reconhecida.");
                     break;
-            }
+            }*/
 
             Console.ReadKey();
         }
