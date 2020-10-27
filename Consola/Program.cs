@@ -8,23 +8,31 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            //todo
-            log("Qual é o saldo?");
-            int saldo = int.Parse(Console.ReadLine());
-            log("Quantas peças têm?");
-            int pecas = int.Parse(Console.ReadLine());
-
-            int preco = 80 * pecas;
-            saldo = saldo - preco;
-
-            if (saldo > 0)
+            log("Introduzir dia da semana:");
+            int dia = int.Parse(Console.ReadLine());
+            switch(dia)
             {
-                //possivel
-                log("A compra é possível\nAinda sobra " + saldo + " unidades monetárias.");
-            } else
-            {
-                //faltadinheiro
-                log("A compra não é possível\nFaltam " + saldo + " unidades monetárias.");
+                case 1:
+                    log("É segunda feira!");
+                    break;
+                case 2:
+                    log("É terça feira!");
+                    break;
+                case 3:
+                    log("É quarta feira!");
+                    break;
+                case 4:
+                    log("É quinta feira!");
+                    break;
+                case 5:
+                    log("É sexta feira!");
+                    break;
+                case 6:
+                    log("É sábado!");
+                    break;
+                case 7:
+                    log("É domingo!");
+                    break;
             }
 
 
