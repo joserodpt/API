@@ -8,39 +8,32 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            Double a, b;
-            int escolha;
+            int canal;
+        
+            log("Introduzir canal de televisão:");
 
-            log("~ Calculadora Simplex ~");
-            log("Introduzir número1:");
-            a = Double.Parse(Console.ReadLine());
-            log("Introduzir número2:");
-            b = Double.Parse(Console.ReadLine());
-            log("Operações possíveis:" +
-                "\n1 - Somar" +
-                "\n2 - Subtrair" +
-                "\n3 - Multiplicar" +
-                "\n4 - Dividir" +
-                "\n(Digita a opção pretendida)");
-            escolha = int.Parse(Console.ReadLine());
+            canal = int.Parse(Console.ReadLine());
 
         
-            switch(escolha)
+            switch(canal)
             {
                 case 1:
-                    log("A soma dá: " + (a+b));
+                    log("O canal " + canal + " é a RTP1");
                     break;
                 case 2:
-                    log("A subtração dá: " + (a - b));
+                    log("O canal " + canal + " é a RTP2");
                     break;
                 case 3:
-                    log("A multiplicação dá: " + (a * b));
+                    log("O canal " + canal + " é a SIC");
                     break;
                 case 4:
-                    log("A divisão dá: " + (a/b));
+                    log("O canal " + canal + " é a TVI");
+                    break;
+                case 5:
+                    log("O canal " + canal + " é a ARTV");
                     break;
                 default:
-                    log("Opção não reconhecida.");
+                    log("Não há nenhum canal com a posição " + canal);
                     break;
             }
 
