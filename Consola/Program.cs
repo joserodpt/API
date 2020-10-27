@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace Consola
@@ -8,35 +9,20 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            int canal;
-        
-            log("Introduzir canal de televisão:");
+            int mes;
+            String nomeMes;
 
-            canal = int.Parse(Console.ReadLine());
+            log("Introduzir mês em número:");
+            mes = int.Parse(Console.ReadLine());
 
-        
-            switch(canal)
+            if (mes <= 12 && mes >= 1)
             {
-                case 1:
-                    log("O canal " + canal + " é a RTP1");
-                    break;
-                case 2:
-                    log("O canal " + canal + " é a RTP2");
-                    break;
-                case 3:
-                    log("O canal " + canal + " é a SIC");
-                    break;
-                case 4:
-                    log("O canal " + canal + " é a TVI");
-                    break;
-                case 5:
-                    log("O canal " + canal + " é a ARTV");
-                    break;
-                default:
-                    log("Não há nenhum canal com a posição " + canal);
-                    break;
+                nomeMes = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(mes);
+                log("O mês " + mes + " (" + nomeMes + ") têm " + DateTime.DaysInMonth(DateTime.Now.Year, mes) + " dias.");
+            } else
+            {
+                log("Mês inválido");
             }
-
             Console.ReadKey();
         }
 
