@@ -10,7 +10,7 @@ namespace Consola
         {
            //todo
             log("O maior número têm o valor ");
-            Console.ReadKey();s
+            Console.ReadKey();
         }
 
         static void log(String s)
