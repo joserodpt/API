@@ -16,9 +16,9 @@ namespace Consola
 
             if (lado1 == lado2)
             {
-                //triangulo
-                double areat = (lado1*lado2)/ 2;
-                log("Área do triângulo: " + areat);
+                //quadrado
+                double quadrado = lado1*lado2;
+                log("Área do quadrado: " + quadrado);
             } else
             {
                 //retangulo
