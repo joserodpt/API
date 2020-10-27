@@ -43,26 +43,6 @@ namespace Consola
                 log("Opção não reconhecida.");
             }
 
-            /*
-            switch(escolha)
-            {
-                case 1:
-                    log("A soma dá: " + (a+b));
-                    break;
-                case 2:
-                    log("A subtração dá: " + (a - b));
-                    break;
-                case 3:
-                    log("A multiplicação dá: " + (a * b));
-                    break;
-                case 4:
-                    log("A divisão dá: " + (a/b));
-                    break;
-                default:
-                    log("Opção não reconhecida.");
-                    break;
-            }*/
-
             Console.ReadKey();
         }
 
