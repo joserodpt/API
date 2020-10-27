@@ -9,8 +9,8 @@ namespace Consola
         static void Main(string[] args)
         {
            //todo
-            log("O maior número têm o valor " + max);
-            Console.ReadKey();
+            log("O maior número têm o valor ");
+            Console.ReadKey();s
         }
 
         static void log(String s)
