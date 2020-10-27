@@ -8,8 +8,26 @@ namespace Consola
     
         static void Main(string[] args)
         {
-           //todo
-            log("O maior número têm o valor ");
+            //todo
+            log("Qual é o saldo?");
+            int saldo = int.Parse(Console.ReadLine());
+            log("Quantas peças têm?");
+            int pecas = int.Parse(Console.ReadLine());
+
+            int preco = 80 * pecas;
+            saldo = saldo - preco;
+
+            if (saldo > 0)
+            {
+                //possivel
+                log("A compra é possível\nAinda sobra " + saldo + " unidades monetárias.");
+            } else
+            {
+                //faltadinheiro
+                log("A compra não é possível\nFaltam " + saldo + " unidades monetárias.");
+            }
+
+
             Console.ReadKey();
         }
 
