@@ -15,7 +15,12 @@ namespace Consola
             venda = Double.Parse(Console.ReadLine());
 
             transacao = venda - compra;
-
+            
+            if (transacao == 0)
+            {
+                log("A transação não deu lucro nêm prejuízo.");
+                return;
+            }
             if (transacao > 0)
             {
                 //lucro
