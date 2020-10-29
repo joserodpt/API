@@ -11,19 +11,26 @@ namespace Consola
             Double a, b;
             int escolha;
 
-            log("~ Calculadora Simplex ~");
-            log("Introduzir número1:");
-            a = Double.Parse(Console.ReadLine());
-            log("Introduzir número2:");
-            b = Double.Parse(Console.ReadLine());
-            log("Operações possíveis:" +
-                "\n1 - Somar" +
-                "\n2 - Subtrair" +
-                "\n3 - Multiplicar" +
-                "\n4 - Dividir" +
-                "\n(Digita a opção pretendida)");
-            escolha = int.Parse(Console.ReadLine());
-
+            try
+            {
+                log("~ Calculadora Simplex ~");
+                log("Introduzir número1:");
+                a = Double.Parse(Console.ReadLine());
+                log("Introduzir número2:");
+                b = Double.Parse(Console.ReadLine());
+                log("Operações possíveis:" +
+                    "\n1 - Somar" +
+                    "\n2 - Subtrair" +
+                    "\n3 - Multiplicar" +
+                    "\n4 - Dividir" +
+                    "\n(Digita a opção pretendida)");
+                escolha = int.Parse(Console.ReadLine());
+            } catch (Exception e)
+            {
+                log("O dado introduzido não é um número.");
+                return;
+            }
+             
         
             switch(escolha)
             {
