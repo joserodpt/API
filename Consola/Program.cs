@@ -8,8 +8,18 @@ namespace Consola
     
         static void Main(string[] args)
         {
+            int dia;
             log("Introduzir dia da semana:");
-            int dia = int.Parse(Console.ReadLine());
+            try
+            {
+                //verificar se é número
+                dia = int.Parse(Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+                log("Dado introduzido não é um número.");
+                return;
+            }
             switch(dia)
             {
                 case 1:
@@ -33,7 +43,9 @@ namespace Consola
                 case 7:
                     log("É sábado!");
                     break;
-             
+                default:
+                    log(dia + " não é um dia da semana.");
+                    break;
             }
 
 
