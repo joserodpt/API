@@ -12,8 +12,14 @@ namespace Consola
         
             log("Introduzir canal de televisão:");
 
-            canal = int.Parse(Console.ReadLine());
-
+            try
+            {
+                canal = int.Parse(Console.ReadLine());
+            } catch (Exception e)
+            {
+                log("Dado introduzido não é um número");
+                return;
+            }
         
             switch(canal)
             {
