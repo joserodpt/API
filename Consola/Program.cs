@@ -23,7 +23,7 @@ namespace Consola
         }
 
         static void verificar(double v)
-        {
+        { 
             if (v > top) { top = v; }
         }
 
