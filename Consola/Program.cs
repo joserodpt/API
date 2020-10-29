@@ -13,7 +13,14 @@ namespace Consola
             String nomeMes;
 
             log("Introduzir mês em número:");
-            mes = int.Parse(Console.ReadLine());
+            try
+            {
+                mes = int.Parse(Console.ReadLine());
+            } catch (Exception e)
+            {
+                log("Dado introduzido não é um número");
+                return;
+            }
 
             switch (mes)
             {
