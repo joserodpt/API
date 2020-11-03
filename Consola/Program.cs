@@ -8,7 +8,7 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            for (int i=1; i<=1000; i++)
+            for (int i=2; i<=1000; i++)
             {
                 if (numeroPrimo(i))
                 {
@@ -19,15 +19,15 @@ namespace Consola
             Console.ReadKey();
         }
 
-        static Boolean numeroPrimo(int i)
+        static Boolean numeroPrimo(int numero)
         {
-            if (i%i == 0)
-            {
-                return true;
-            } else
-            {
-                return false;
-            }
+            if (numero == 1) return false; //1 não é primo
+            if (numero == 2) return true; //2 é primo
+            if (numero % 2 == 0) return false; //número inteiro     
+
+            //TODO
+
+            return true;
         }
 
         static void log(String s)
