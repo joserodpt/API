@@ -8,18 +8,26 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            double soma, media;
-            soma = 0;
-            log("Introduza o número N:");
-            int n = int.Parse(Console.ReadLine());
             for (int i=1; i<=n; i++)
             {
-                soma = soma + i;
+                if (numeroPrimo(i))
+                {
+                    log(i + " é numero primo");
+                }
             }
-            media = soma / n;
-            log("A média de " + n + " números inteiros é: " + media);
-
+           
             Console.ReadKey();
+        }
+
+        static Boolean numeroPrimo(int i)
+        {
+            if (i%i == 0)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
         }
 
         static void log(String s)
