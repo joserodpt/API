@@ -8,7 +8,7 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            for (int i=1; i<=n; i++)
+            for (int i=1; i<=1000; i++)
             {
                 if (numeroPrimo(i))
                 {
