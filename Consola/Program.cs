@@ -8,9 +8,12 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            log("Tabuada do 2:\n");
+            int tabuada;
+            log("De quem é a tabuada?");
+            tabuada = int.Parse(Console.ReadLine());
+            log("Tabuada do " + tabuada + ":\n");
             for (int i = 1; i <= 10; i++)
-                log("2x" + i + " -> " + (2*i));
+                log(tabuada + "x" + i + " -> " + (tabuada*i));
 
             Console.ReadKey();
         }
