@@ -8,11 +8,28 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            int tabuada;
-            log("De quem é a tabuada?");
-            tabuada = int.Parse(Console.ReadLine());
-            log("Tabuada do " + tabuada + ":\n");
-            for (int i = 1; i <= 10; i++) { log(tabuada + "x" + i + " = " + (tabuada*i)); }
+            String frase;
+            int palavras = 0, espacos = 0;
+            log("Insere a frase:");
+            frase = Console.ReadLine();
+
+            //verificar se frase é vazia
+            if (String.IsNullOrEmpty(frase))
+            {
+                log("Frase introduzida é vazia.");
+                return;
+            }
+
+            for (int i = 0; i <= frase.Length - 1; i++) { 
+                if (Char.IsWhiteSpace(frase[i]))
+                {
+                    espacos++;
+                }
+            }
+               
+            palavras = espacos + 1;
+                
+            log("A frase de " + frase.Length + " caracteres têm\n> " + espacos + " espaços\n> " + palavras + " palavras");
             Console.ReadKey();
         }
 
