@@ -8,8 +8,7 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            for (int i = 1; i <= 15; i++)
-                log(i + "");
+            for (int i = 1; i <= 15; i++) { log(i + ""); }
 
             Console.ReadKey();
         }
