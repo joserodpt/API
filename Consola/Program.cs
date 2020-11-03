@@ -9,8 +9,7 @@ namespace Consola
         static void Main(string[] args)
         {
             log("Tabuada do 2:\n");
-            for (int i = 1; i <= 10; i++)
-                log("2x" + i + " -> " + (2*i));
+            for (int i = 1; i <= 10; i++) { log("2x" + i + " = " + (2 * i)); }
 
             Console.ReadKey();
         }
