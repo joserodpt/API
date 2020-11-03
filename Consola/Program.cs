@@ -12,7 +12,7 @@ namespace Consola
             log("De quem é a tabuada?");
             tabuada = int.Parse(Console.ReadLine());
             log("Tabuada do " + tabuada + ":\n");
-            for (int i = 1; i <= 10; i++) { log(tabuada + "x" + i + " == " + (tabuada*i)); }
+            for (int i = 1; i <= 10; i++) { log(tabuada + "x" + i + " = " + (tabuada*i)); }
             Console.ReadKey();
         }
 
