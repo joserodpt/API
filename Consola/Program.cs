@@ -8,11 +8,13 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            for (int i=2; i<=1000; i++)
+            log("Introduzir limite máximo:");
+            int limite = int.Parse(Console.ReadLine());
+            for (int i=1; i<=limite; i++)
             {
                 if (numeroPrimo(i))
                 {
-                    log(i + " é numero primo");
+                    log(i + " é número primo");
                 }
             }
            
@@ -21,18 +23,17 @@ namespace Consola
 
         static Boolean numeroPrimo(int numero)
         {
-            if (numero == 1) return false; //1 não é primo
-            if (numero == 2) return true; //2 é primo
-            if (numero % 2 == 0) return false; //número inteiro     
-
-            //TODO
-
-            return true;
+            //contador de restos 0
+            int contador = 0;
+            for (int j=1; j <= numero; j++)
+            {
+                //achar divisões que dão resto 0
+                if (numero % j == 0) { contador++; }
+            }
+            //número primo é o resultado de 2 divisões, por 1 e pelo próprio, portanto vai ter 2 restos
+            return contador == 2;
         }
 
-        static void log(String s)
-        {
-            Console.WriteLine(s);
-        }
+        static void log(String s) {  Console.WriteLine(s);  }
     }
 }
