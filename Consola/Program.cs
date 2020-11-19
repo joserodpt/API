@@ -8,20 +8,11 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            Boolean executar = true;
-            int top = 0;
-            while(executar)
+            int i = 1;
+            while (i < 16)
             {
-                log("Introduzir numero:");
-                int i = int.Parse(Console.ReadLine());
-                if (i == 0)
-                {
-                    executar = false;
-                    log("O maior número é o " + top);
-                } else
-                {
-                    if (i > top) { top = i; }
-                }
+                Console.WriteLine(i);
+                i++;
             }
 
             Console.ReadKey();
