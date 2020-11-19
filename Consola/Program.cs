@@ -13,16 +13,17 @@ namespace Consola
             int low = 0;
             while (executar)
             {
-                log("Introduzir numero:");
+                log("Introduzir número:");
                 int i = int.Parse(Console.ReadLine());
                 if (i == 0)
                 {
                     executar = false;
                     log("O maior número é o " + top);
+                    log("O menor número é o " + top);
                 }
                 else
                 {
-                    if (i > top) { top = i; } 
+                    if (i > low) { top = i; } else { low = i; }
                 }
             }
 
