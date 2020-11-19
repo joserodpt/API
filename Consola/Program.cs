@@ -8,27 +8,23 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            int i = 1;
-            while(i<16)
+            Boolean executar = true;
+            int top = 0;
+            while(executar)
             {
-                Console.WriteLine(i);
-                i++;    
+                log("Introduzir numero:");
+                int i = int.Parse(Console.ReadLine());
+                if (i == 0)
+                {
+                    executar = false;
+                    log("O maior número é o " + top);
+                } else
+                {
+                    if (i > top) { top = i; }
+                }
             }
 
             Console.ReadKey();
-        }
-
-        static Boolean numeroPrimo(int numero)
-        {
-            //contador de restos 0
-            int contador = 0;
-            for (int j=1; j <= numero; j++)
-            {
-                //achar divisões que dão resto 0
-                if (numero % j == 0) { contador++; }
-            }
-            //número primo é o resultado de 2 divisões, por 1 e pelo próprio, portanto vai ter 2 restos
-            return contador == 2;
         }
 
         static void log(String s) {  Console.WriteLine(s);  }
