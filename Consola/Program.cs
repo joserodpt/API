@@ -19,11 +19,17 @@ namespace Consola
                 {
                     executar = false;
                     log("O maior número é o " + top);
-                    log("O menor número é o " + top);
+                    log("O menor número é o " + low);
                 }
                 else
                 {
-                    if (i > low) { top = i; } else { low = i; }
+                    if (i > top)
+                    {
+                        top = i;
+                    } else
+                    {
+                        low = i;
+                    }
                 }
             }
 
