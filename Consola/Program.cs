@@ -8,16 +8,13 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            log("Introduzir limite máximo:");
-            int limite = int.Parse(Console.ReadLine());
-            for (int i=1; i<=limite; i++)
+            int i = 1;
+            while(i<16)
             {
-                if (numeroPrimo(i))
-                {
-                    log(i + " é número primo");
-                }
+                Console.WriteLine(i);
+                i++;    
             }
-           
+
             Console.ReadKey();
         }
 
