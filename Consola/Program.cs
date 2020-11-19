@@ -10,6 +10,7 @@ namespace Consola
         {
             Boolean executar = true;
             int top = 0;
+            int low = 0;
             while (executar)
             {
                 log("Introduzir numero:");
@@ -21,7 +22,7 @@ namespace Consola
                 }
                 else
                 {
-                    if (i > top) { top = i; }
+                    if (i > top) { top = i; } 
                 }
             }
 
