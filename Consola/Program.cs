@@ -9,9 +9,17 @@ namespace Consola
         static void Main(string[] args)
         {
             int i = 1;
+            Boolean par = false;
             while (i < 16)
             {
-                Console.WriteLine(i);
+                if (par)
+                {
+                    Console.WriteLine(i);
+                    par = false;
+                } else
+                {
+                    par = true;
+                }
                 i++;
             }
 
