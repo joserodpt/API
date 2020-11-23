@@ -11,6 +11,8 @@ namespace Consola
             Boolean executar = true;
             int top = 0;
             int low = 0;
+            log("Introduzir número:");
+            top = low = int.Parse(Console.ReadLine());
             while (executar)
             {
                 log("Introduzir número:");
@@ -23,10 +25,11 @@ namespace Consola
                 }
                 else
                 {
+
                     if (i > top)
                     {
                         top = i;
-                    } else
+                    } else if (i != 0 && i < low)
                     {
                         low = i;
                     }
