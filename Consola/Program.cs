@@ -8,28 +8,29 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            Boolean executar = true;
-            int top = 0;
-            int low = 0;
-            while (executar)
+            log("Introduzir número:");
+            String original = Console.ReadLine();
+            String inv = reverse(original);
+
+            log("Introduzido: " + original);
+            log("Invertido: " + inv);
+
+            if (original == inv)
             {
-                log("Introduzir número:");
-                int i = int.Parse(Console.ReadLine());
-                if (i == 0)
-                {
-                    executar = false;
-                    log("O maior número é o " + top);
-                    log("O menor número é o " + top);
-                }
-                else
-                {
-                    if (i > low) { top = i; } else { low = i; }
-                }
+                log("Temos capicua!");
+            } else
+            {
+                log("Não temos capicua!");
             }
 
             Console.ReadKey();
         }
-
+        public static string reverse(String s)
+        {
+            char[] arraycatacteres = s.ToCharArray();
+            Array.Reverse(arraycatacteres);
+            return new String(arraycatacteres);
+        }
         static void log(String s) {  Console.WriteLine(s);  }
     }
 }
