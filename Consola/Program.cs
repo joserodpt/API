@@ -14,9 +14,17 @@ namespace Consola
             {
                 log("Introduza a sua idade:");
                 id = Console.ReadLine();
+                
             } while (int.TryParse(id, out idade) == false);
             log("A idade do utilizador é " + idade);
-
+            if (Enumerable.Range(10, 90).Contains(idade))
+            {
+                log("A idade " + idade + " está entre os 10 e os 90 anos!");
+            }
+            else
+            {
+                log("A idade " + idade + " NÃO está entre os 10 e os 90 anos!");
+            }
             Console.ReadKey();
         }
 
