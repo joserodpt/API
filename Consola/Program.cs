@@ -20,7 +20,7 @@ namespace Consola
                     soma += num;
                 }
             } while (num != 0);
-            log("A soma total de números introduzidos foi de " + contar);
+            log("A soma total de " + contar + " números introduzidos foi de " + soma);
 
             Console.ReadKey();
         }
