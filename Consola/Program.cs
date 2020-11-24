@@ -8,29 +8,22 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            log("Introduzir número:");
-            String original = Console.ReadLine();
-            String inv = reverse(original);
-
-            log("Introduzido: " + original);
-            log("Invertido: " + inv);
-
-            if (original == inv)
+            int contar, num;
+            contar = 0;
+            do
             {
-                log("Temos capicua!");
-            } else
-            {
-                log("Não temos capicua!");
-            }
+                log("Introduza um numero:");
+                num = int.Parse(Console.ReadLine());
+                if (num != 0)
+                {
+                    contar++;
+                }
+            } while (num != 0);
+            log("O total de números introduzidos foi de " + contar);
 
             Console.ReadKey();
         }
-        public static string reverse(String s)
-        {
-            char[] arraycatacteres = s.ToCharArray();
-            Array.Reverse(arraycatacteres);
-            return new String(arraycatacteres);
-        }
+
         static void log(String s) {  Console.WriteLine(s);  }
     }
 }
