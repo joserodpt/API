@@ -8,19 +8,14 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            int contar, num, soma;
-            contar = soma = 0;
+            String id;
+            int idade = 0;
             do
             {
-                log("Introduza um numero:");
-                num = int.Parse(Console.ReadLine());
-                if (num != 0)
-                {
-                    contar++;
-                    soma += num;
-                }
-            } while (num != 0);
-            log("A soma total de " + contar + " números introduzidos foi de " + soma);
+                log("Introduza a sua idade:");
+                id = Console.ReadLine();
+            } while (int.TryParse(id, out idade) == false);
+            log("A idade do utilizador é " + idade);
 
             Console.ReadKey();
         }
