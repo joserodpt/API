@@ -8,8 +8,8 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            int contar, num;
-            contar = 0;
+            int contar, num, soma;
+            contar = soma = 0;
             do
             {
                 log("Introduza um numero:");
@@ -17,9 +17,10 @@ namespace Consola
                 if (num != 0)
                 {
                     contar++;
+                    soma += num;
                 }
             } while (num != 0);
-            log("O total de números introduzidos foi de " + contar);
+            log("A soma total de números introduzidos foi de " + contar);
 
             Console.ReadKey();
         }
