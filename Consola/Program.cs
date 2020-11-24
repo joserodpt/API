@@ -8,19 +8,21 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            int contar, num, soma;
+            double contar, num, soma;
+            double media;
             contar = soma = 0;
             do
             {
                 log("Introduza um numero:");
-                num = int.Parse(Console.ReadLine());
+                num = double.Parse(Console.ReadLine());
                 if (num != 0)
                 {
                     contar++;
                     soma += num;
                 }
             } while (num != 0);
-            log("A soma total de " + contar + " números introduzidos foi de " + soma);
+            media = soma / contar;
+            log("A soma total de " + contar + " números introduzidos foi de " + soma + "\ne a média é de " + media);
 
             Console.ReadKey();
         }
