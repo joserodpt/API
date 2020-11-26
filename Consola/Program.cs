@@ -8,16 +8,23 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            int a, b;
-            log("Introduza a:");
-            a = int.Parse(Console.ReadLine());
-            log("Introduza b:");
-            b = int.Parse(Console.ReadLine());
-            log("Multiplicação: " + multiplicar(a, b));
+            quadrad();
             Console.ReadKey();
         }
 
-        static int multiplicar(int a, int b) { return a * b; }
+        static void quadrad()
+        {
+            topobaixo();
+            bordas();
+            bordas();
+            bordas();
+            bordas();
+            topobaixo();
+        }
+
+        static void topobaixo() { log("-------------"); }
+        static void bordas() { log("|           |"); }
+
 
         static void log(String s) {  Console.WriteLine(s);  }
     }
