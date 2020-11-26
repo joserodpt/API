@@ -13,11 +13,11 @@ namespace Consola
             a = int.Parse(Console.ReadLine());
             log("Introduza b:");
             b = int.Parse(Console.ReadLine());
-            log("Soma: " + soma(a, b));
+            log("Multiplicação: " + multiplicar(a, b));
             Console.ReadKey();
         }
 
-        static int soma(int a, int b) { return a + b; }
+        static int multiplicar(int a, int b) { return a * b; }
 
         static void log(String s) {  Console.WriteLine(s);  }
     }
