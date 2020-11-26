@@ -8,25 +8,16 @@ namespace Consola
     
         static void Main(string[] args)
         {
-            String id;
-            int idade = 0;
-            do
-            {
-                log("Introduza a sua idade:");
-                id = Console.ReadLine();
-                
-            } while (int.TryParse(id, out idade) == false);
-            log("A idade do utilizador é " + idade);
-            if (idade >= 10 && idade <= 90)
-            {
-                log("A idade " + idade + " está entre os 10 e os 90 anos!");
-            }
-            else
-            {
-                log("A idade " + idade + " NÃO está entre os 10 e os 90 anos!");
-            }
+            int a, b;
+            log("Introduza a:");
+            a = int.Parse(Console.ReadLine());
+            log("Introduza b:");
+            b = int.Parse(Console.ReadLine());
+            log("Soma: " + soma(a, b));
             Console.ReadKey();
         }
+
+        static int soma(int a, int b) { return a + b; }
 
         static void log(String s) {  Console.WriteLine(s);  }
     }
