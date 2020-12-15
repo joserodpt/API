@@ -13,11 +13,11 @@ namespace Consola
             a = int.Parse(Console.ReadLine());
             log("Introduza b:");
             b = int.Parse(Console.ReadLine());
-            log("Multiplicação: " + multiplicar(a, b));
+            log("A Área do círculo de raio " + (a * b) + " é: " + multiplicar(a, b));
             Console.ReadKey();
         }
 
-        static int multiplicar(int a, int b) { return a * b; }
+        static double multiplicar(int a, int b) { return Math.PI * (a * b); }
 
         static void log(String s) {  Console.WriteLine(s);  }
     }
