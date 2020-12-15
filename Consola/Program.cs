@@ -17,7 +17,7 @@ namespace Consola
             Console.ReadKey();
         }
 
-        static double multiplicar(int a, int b) { return Math.PI * (a * b); }
+        static double multiplicar(int a, int b) { return Math.PI * Math.Pow((a * b), 2.0); }
 
         static void log(String s) {  Console.WriteLine(s);  }
     }
