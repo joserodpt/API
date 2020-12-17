@@ -32,7 +32,7 @@ namespace Consola
         static void quadrad()
         {
             topobaixo();
-            for (int a = 0; a < lado; a++) { bordas(); }
+            bordas();
             topobaixo();
         }
 
@@ -42,10 +42,12 @@ namespace Consola
             log(print);
         }
         static void bordas() {
-            String print = icon;
-            for (int a = 0; a <= lado*2 ; a++) { print += " "; }
-            print += icon;
-            log(print);
+            for(int lop = 0; lop < lado; lop++) {
+                String print = icon;
+                for (int a = 0; a <= lado * 2; a++) { print += " "; }
+                print += icon;
+                log(print);
+            }
         }
 
 
